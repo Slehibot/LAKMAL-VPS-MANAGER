@@ -139,7 +139,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @Kingamda_vps_manager)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @slehiteam)"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
@@ -166,7 +166,7 @@ fun_ajuda() {
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "✅ All Tutorials , Updates : @Kingamda_vps_manager"
+            --text "✅ All Tutorials , Updates : @slehiteam"
         return 0
     else
         ShellBot.sendMessage --chat_id $id_chatuser \
