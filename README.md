@@ -1,7 +1,8 @@
 ## ◇────── SLEHIBOT VPS MANAGER ───────◇
 
 
-## ㅤ
+## Recommend System 
+ ✮ Ubuntu 18.04 (LTS)ㅤ
 
 ___Update System Packages and Install SCRIPT___
 
@@ -13,7 +14,7 @@ sudo -s
 <h3>Second Command</h3>
 
 ```
-apt-get update -y; apt-get upgrade -y; apt install vnstat -y; wget https://raw.githubusercontent.com/Slehibot/SLEHIBOT-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
+apt-get update -y; apt-get upgrade -y; apt install vnstat -y; wget https://raw.githubusercontent.com/Slehibot/LAKMAL-VPS-MANAGER/main/hehe; chmod 777 hehe;./hehe
 ```
 
 ## ㅤ
