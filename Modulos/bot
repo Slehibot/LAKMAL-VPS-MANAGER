@@ -79,21 +79,9 @@ fun_ajuda() {
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User Information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
         env_msg+="• <u>VPS INFO</u> = Server Information\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>BACKUP</u> = Create ssh Backup and resellers\n\n"
         env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
         env_msg+="• <u>SPEEDTEST</u> = Connection test\n\n"
-        env_msg+="• <u>FILES</u> = Host Files\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
-        env_msg+="• <u>AUTOBACKUP</u> = On/Off Automatic Backup\n\n"
-        env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
@@ -122,15 +110,6 @@ fun_ajuda() {
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User Information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
-        env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
@@ -154,13 +133,6 @@ fun_ajuda() {
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh date\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
@@ -194,12 +166,29 @@ fun_adduser() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🙎‍♂️ CREATE USER 🙎‍♂️\n\nEnter Username:" \
-            --reply_markup "$(ShellBot.ForceReply)"
-    } || {
+            --text "🙎‍♂️ CREATE USER 🙎‍♂️\n\nHow Many Hours Should It Last EX: 1-120:" \
+                --reply_markup "$(ShellBot.ForceReply)"
+        }
+    else
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
             --text "🚫 ACCESS DENIED 🚫"
         return 0
+    fi
+}
+
+fun_teste() {
+    usuario=$(echo SLEHI$((RANDOM % +5000)))
+    senha='SLEHIBOT'
+    limite='2'
+    t_time=$1
+    ex_date=$(date '+%d/%m/%C%y' -d " +5 days")
+    tuserdate=$(date '+%C%y/%m/%d' -d " +5 days")
+    [[ -z $t_time ]] && {
+        ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
+            --text "$(echo -e "❌ error try again")" \
+            --parse_mode html
+        return 0
+        _erro='1'
     }
 }
 
@@ -940,9 +929,9 @@ fun_add_teste() {
 }
 
 fun_teste() {
-    usuario=$(echo TESTE$((RANDOM % +500)))
-    senha='1234'
-    limite='1'
+    usuario=$(echo SLEHI$((RANDOM % +5000)))
+    senha='SLEHIBOT'
+    limite='2'
     t_time=$1
     ex_date=$(date '+%d/%m/%C%y' -d " +2 days")
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
