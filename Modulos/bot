@@ -15,10 +15,10 @@ ShellBot.username
 fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
-        env_msg="<b>◈────────────────────────────◈</b>\n"
+        env_msg="<b>❖────────────────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>◈────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -32,10 +32,10 @@ fun_menu() {
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>◈────────────────────────────◈</b>\n"
+        env_msg="<b>❖────────────────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>◈────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -43,10 +43,10 @@ fun_menu() {
         return 0
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>◈────────────────────────────◈</b>\n"
+        env_msg="<b>❖────────────────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>◈────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -69,9 +69,9 @@ fun_ajuda() {
     }
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
-        env_msg="<b>◈────────────────────────────◈</b>\n"
+        env_msg="<b>❖────────────────────────────❖</b>\n"
         env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
-        env_msg+="<b>◈────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -95,14 +95,14 @@ fun_ajuda() {
         env_msg+="• <u>AUTOBACKUP</u> = On/Off Automatic Backup\n\n"
         env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n\n"
-        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
-        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
 	ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e ✅ All Tutorials , Updates : @Kingamda_vps_manager)"
+            --text "$(echo -e ✅ All Tutorials , Updates : @slehiteam)"
         return 0
     elif [[ -d /etc/bot/suspensos/$id_name ]]; then
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -112,9 +112,9 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
-        env_msg="<b>◈────────────────────────────◈</b>\n"
+        env_msg="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
-        env_msg+="<b>◈────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="<b>[01] /menu</b> = Display menu\n"
         env_msg+="<b>[02] /info</b> = Display information\n"
@@ -132,9 +132,9 @@ fun_ajuda() {
         env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
         env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
-        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
-        env_msg+="<b>◈◈◈◈────────────◈◈◈◈</b>\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -143,10 +143,10 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
-        env_msg="<b>◈───────────────────────────────◈</b>\n"
+        env_msg="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>                               ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>◈───────────────────────────────◈</b>\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -449,9 +449,9 @@ ver_users() {
     if [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         arq_info=/tmp/$(echo $RANDOM)
         local info_users
-        info_users='◈──────────────────◈\n'
+        info_users='❖──────────────────❖\n'
         info_users+='<b>USER INFORMATION</b>\n'
-        info_users+='◈──────────────────◈\n\n'
+        info_users+='❖──────────────────❖\n\n'
         info_users+='⚠️ Displays in the format below:\n\n'
         info_users+='<code>USER PASSWORD DATE LIMIT</code>\n'
         ShellBot.sendMessage --chat_id $id_admin \
@@ -460,7 +460,7 @@ ver_users() {
         fun_infu() {
             local info
             for user in $(cat /etc/passwd | awk -F : '$3 >= 1000 {print $1}' | grep -v nobody); do
-                info='◈──────────────────◈\n'
+                info='❖──────────────────❖\n'
                 [[ -e /etc/VPSManager/senha/$user ]] && senha=$(cat /etc/VPSManager/senha/$user) || senha='Null'
                 [[ $(grep -wc $user $HOME/usuarios.db) != '0' ]] && limite=$(grep -w $user $HOME/usuarios.db | cut -d' ' -f2) || limite='Null'
                 datauser=$(chage -l $user | grep -i co | awk -F : '{print $2}')
@@ -501,9 +501,9 @@ ver_users() {
         }
         arq_info=/tmp/$(echo $RANDOM)
         local info_users
-        info_users='◈──────────────────◈\n'
+        info_users='❖──────────────────❖\n'
         info_users+='<b>USER INFORMATION</b>\n'
-        info_users+='◈──────────────────◈\n\n'
+        info_users+='❖──────────────────❖\n\n'
         info_users+='⚠️ Displays in the format below:\n\n'
         info_users+='<code>USER PASSWORD DATE LIMIT</code>\n'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -512,7 +512,7 @@ ver_users() {
         fun_infu() {
             local info
             for user in $(ls /etc/bot/revenda/${callback_query_from_username}/usuarios); do
-                info='◈──────────────────◈\n'
+                info='❖──────────────────❖\n'
                 [[ -e /etc/VPSManager/senha/$user ]] && senha=$(cat /etc/VPSManager/senha/$user) || senha='Null'
                 [[ $(grep -wc $user $HOME/usuarios.db) != '0' ]] && limite=$(grep -w $user $HOME/usuarios.db | cut -d' ' -f2) || limite='Null'
                 datauser=$(chage -l $user | grep -i co | awk -F : '{print $2}')
@@ -582,9 +582,9 @@ monitor_ssh() {
         database="/root/usuarios.db"
         cad_onli=/tmp/$(echo $RANDOM)
         local info_on
-        info_on='◈──────────────────◈\n'
+        info_on='❖──────────────────❖\n'
         info_on+='<b>ONLINES USERS MONITOR</b>\n'
-        info_on+='◈──────────────────◈\n\n'
+        info_on+='❖──────────────────❖\n\n'
         info_on+='⚠️ Displays in the format below:\n\n'
         info_on+='<code>ONLIN USERE/TIME LIMIT\n</code>'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -601,7 +601,7 @@ monitor_ssh() {
                 conex=$(($_cont + $sqd))
                 [[ $conex -gt '0' ]] && {
                     timerr="$(ps -o etime $(ps -u $user | grep sshd | awk 'NR==1 {print $1}') | awk 'NR==2 {print $1}')"
-                    info2+="◈──────────────────◈\n"
+                    info2+="❖──────────────────❖\n"
                     info2+="🟢 $user       $conex/$lim       ⏳$timerr\n"
                 }
             done
@@ -639,9 +639,9 @@ monitor_ssh() {
         database="/root/usuarios.db"
         cad_onli=/tmp/$(echo $RANDOM)
         local info_on
-        info_on='◈──────────────────◈\n'
+        info_on='❖──────────────────❖\n'
         info_on+='<b>ONLINES USERS MONITOR</b>\n'
-        info_on+='◈──────────────────◈\n\n'
+        info_on+='❖──────────────────❖\n\n'
         info_on+='⚠️ Displays in the format below:\n\n'
         info_on+='<code>ONLINE USER/TIME LIMIT\n</code>'
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -754,9 +754,9 @@ infovps() {
     [[ "$(netstat -nltp | grep 'dropbear' | wc -l)" != '0' ]] && echo -e "DropBear: $(netstat -nplt | grep 'dropbear' | awk -F ":" {'print $4'} | xargs)" >>$PTs
     [[ "$(netstat -nplt | grep 'python' | wc -l)" != '0' ]] && echo -e "Proxy Socks: $(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >>$PTs
     local info
-    info="◈──────────────────◈\n"
+    info="❖──────────────────❖\n"
     info+="<b>        SERVER INFORMATION</b>\n"
-    info+="◈──────────────────◈\n\n"
+    info+="❖──────────────────❖\n\n"
     info+="<b>OPERATING SYSTEM</b>\n"
     info+="$system\n\n"
     info+="<b>PROCESSOR</b>\n"
@@ -804,7 +804,7 @@ fun_download() {
     echo $_file2
     ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
         --document "@/etc/bot/arquivos/$_file" \
-        --caption "$(echo -e "<b>=====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>=====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM </b>\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>")" 
+        --caption "$(echo -e "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>\n\n<b>✰ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>✰ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>✰ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>✰ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" 
         --parse_mode html
     [[ -e "/root/$(awk -F " " '/Nome/ {print $2}' $_file2).ovpn" ]] && {
         ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
@@ -833,9 +833,9 @@ otimizer() {
     MEM2=$(free | awk '/Mem:/ {print int(100*$3/$2)}')
     res=$(expr $MEM1 - $MEM2)
     local sucess
-    sucess="◈──────────────────◈\n"
+    sucess="❖──────────────────❖\n"
     sucess+="<b>  SUCCESSFULLY OPTIMIZED!</b>\n"
-    sucess+="◈──────────────────◈\n\n"
+    sucess+="❖──────────────────❖\n\n"
     sucess+="<i>Previous use</i> $MEM1%\n\n"
     sucess+="<b>Total Ram Memory</b> $ram1\n"
     sucess+="<b>free</b> $ram3\n"
@@ -863,9 +863,9 @@ speed_test() {
     upl=$(cat speed | sed -n '9 p' | awk -F : {'print $NF'})
     lnk=$(cat speed | sed -n '10 p' | awk {'print $NF'})
     local msg
-    msg="◈──────────────────◈\n"
+    msg="❖──────────────────❖\n"
     msg+="<b> --⟫⟫⟫🚀 SERVER SPEED 🚀⟪⟪⟪—</b>\n"
-    msg+="◈──────────────────◈\n\n"
+    msg+="❖──────────────────❖\n\n"
     msg+="<b>PING/LATENCY:</b>$png\n"
     msg+="<b>DOWNLOAD:</b>$down\n"
     msg+="<b>UPLOAD:</b>$upl\n"
@@ -897,11 +897,11 @@ backup_users() {
 
 sobremim() {
     local msg
-    msg="◈──────────────────◈\n"
+    msg="❖──────────────────❖\n"
     msg+="<b>❣️ SLEHIBOT VPS MANAGER ❣️</b>\n"
-    msg+="◈──────────────────◈\n\n"
-    msg+="<b>Developed by:</b> @Kingamda_vps_manager\n"
-    msg+="<b>Official channel:</b> @Kingamda_vps_manager\n\n"
+    msg+="❖──────────────────❖\n\n"
+    msg+="<b>Developed by:</b> @slehiteam\n"
+    msg+="<b>Official Group:</b> @slehibot\n\n"
     msg+="I was created with the purpose of providing information and tools for VPN management on 🐧 GNU/Linux 🐧 servers.\n\n"
     msg+="<b>Menu:</b> /menu\n"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -981,13 +981,13 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧TEST SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at  :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM</b>\n\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️ </b>\n<b>◈──────────────────◈</b>")" \
+                --caption "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻TEST SSH ACCOUNT༺─────❖</b>\n\n<b>✰ Username    ៚</b>  <code>$usuario</code>\n<b>✰ Password     ៚</b> <code>1234</code>\n<b>✰ Expire at  ៚</b> $t_time $hrs / Hours \n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈────⪧TEST SSH ACCOUNT ⪦────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$usuario</code>\n<b>◈ Password     :⪧</b> <code>1234</code>\n<b>◈ Expire at       :⪧</b> $t_time $hrs / Hours \n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM</b>\n<b>◈──────────────────◈</b>\n\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>")" \
+            --text "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻TEST SSH ACCOUNT༺─────❖</b>\n\n<b>✰ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>✰ Username    ៚</b>  <code>$usuario</code>\n<b>✰ Password     ៚</b> <code>1234</code>\n<b>✰ Expire at       ៚</b> $t_time $hrs / Hours \n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" \
             --parse_mode html
         return 0
     }
@@ -1072,9 +1072,9 @@ relatorio_rev() {
         _cont_sub=$(grep -wc subrevenda $ativos)
         _cont_revt=$(grep -wc revenda $ativos)
         local msg
-        msg="◈──────────────────◈\n"
+        msg="❖──────────────────❖\n"
         msg+="<b>📊 REPORT | INFORMATION</b>\n"
-        msg+="◈──────────────────◈\n\n"
+        msg+="❖──────────────────❖\n\n"
         msg+="<b>Total users:</b> $_tuser\n"
         msg+="<b>Online users:</b> $_onli\n"
         msg+="<b>Active Resellers:</b> $_cont_rev\n"
@@ -1090,7 +1090,7 @@ relatorio_rev() {
                 --text "⚠️ NO DEALER FOUND !"
             return 0
         }
-        echo -e "RETAILER'S REPORT\n\nTotal: $_cont_revt  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n◈──────────────────◈" >/tmp/Relatorio.txt
+        echo -e "RETAILER'S REPORT\n\nTotal: $_cont_revt  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n❖──────────────────❖" >/tmp/Relatorio.txt
         while read _revlist; do
             _nome_rev="$(echo $_revlist | awk '{print $2}')"
             _limite_rev="$(echo $_revlist | awk '{print $4}')"
@@ -1119,7 +1119,7 @@ relatorio_rev() {
                 total_on='0'
                 total_users='0'
             }
-            echo -e "\nSTATUS: $_status\nDEALER: @$_nome_rev\nLIMIT: $_limite_rev\nDAYS REMAINING: $_data_rev\nSSH CREATED: $total_users\nSSH ONLINE: $total_on\nSUB-RESALE: $_subrev\n\n◈──────────────────◈" >>/tmp/Relatorio.txt
+            echo -e "\nSTATUS: $_status\nDEALER: @$_nome_rev\nLIMIT: $_limite_rev\nDAYS REMAINING: $_data_rev\nSSH CREATED: $total_users\nSSH ONLINE: $total_on\nSUB-RESALE: $_subrev\n\n❖──────────────────❖" >>/tmp/Relatorio.txt
         done <<<"$(grep -w 'revenda' $ativos)"
         ShellBot.sendDocument --chat_id $id_admin \
             --document "@/tmp/Relatorio.txt" \
@@ -1139,9 +1139,9 @@ relatorio_rev() {
             fun_verif_limite_rev ${callback_query_from_username}
             _cont_disp=$(echo $_cont_limite - $_result | bc)
             local msg
-            msg="◈──────────────────◈\n"
+            msg="❖──────────────────❖\n"
             msg+="<b>📊 REPORT | INFORMATION</b>\n"
-            msg+="◈──────────────────◈\n\n"
+            msg+="❖──────────────────❖\n\n"
             msg+="<b>Login Limit:</b> $_cont_limite\n"
             msg+="<b>Available Limit:</b> $_cont_disp\n"
             ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
@@ -1161,16 +1161,16 @@ relatorio_rev() {
         _cont_atv=$(grep -wc SUBREVENDA /etc/bot/revenda/${callback_query_from_username}/${callback_query_from_username})
         _cont_sup=$(fun_contsub | paste -s -d + | bc)
         local msg
-        msg="◈──────────────────◈\n"
+        msg="❖──────────────────❖\n"
         msg+="<b>📊 REPORT | INFORMATION</b>\n"
-        msg+="◈──────────────────◈\n\n"
+        msg+="❖──────────────────❖\n\n"
         msg+="<b>Login Limit:</b> $_cont_limite\n"
         msg+="<b>Available Limit:</b> $_cont_disp\n"
         msg+="<b>Total Sub-Resales:</b> $_cont_atv\n"
         msg+="<b>Suspended Sub-Resales:</b> $_cont_sup\n"
         msg+="<b>Username:</b> @${callback_query_from_username}\n"
         msg+="<b>ID:</b> <code>${callback_query_from_id}</code>\n"
-        echo -e "LIST OF SUB-SELLERS\n\nTotal: $_cont_atv  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n◈──────────────────◈" >/tmp/Relatorio-${callback_query_from_username}.txt
+        echo -e "LIST OF SUB-SELLERS\n\nTotal: $_cont_atv  -  $(printf 'Data: %(%d/%m/%Y)T\n')\n❖──────────────────❖" >/tmp/Relatorio-${callback_query_from_username}.txt
         while read _sublist; do
             _usub="$(echo $_sublist | awk '{print $2}')"
             _limit_sub=$(echo $_sublist | awk '{print $4}')
@@ -1198,7 +1198,7 @@ relatorio_rev() {
                 total_on='0'
                 total_users='0'
             }
-            echo -e "\nSTATUS: $_status\nSUB-DEALER: @$_usub\nLIMIT: $_limit_sub\nDAYS REMAINING: $_data_sub\nSSH CREATED: $total_users\nSSH ONLINE: $total_on\n\n◈──────────────────◈" >>/tmp/Relatorio-${callback_query_from_username}.txt
+            echo -e "\nSTATUS: $_status\nSUB-DEALER: @$_usub\nLIMIT: $_limit_sub\nDAYS REMAINING: $_data_sub\nSSH CREATED: $total_users\nSSH ONLINE: $total_on\n\n❖──────────────────❖" >>/tmp/Relatorio-${callback_query_from_username}.txt
         done <<<"$(grep -w 'SUBREVENDA' /etc/bot/revenda/${callback_query_from_username}/${callback_query_from_username})"
         ShellBot.sendDocument --chat_id ${callback_query_message_chat_id[$id]} \
             --document "@/tmp/Relatorio-${callback_query_from_username}.txt" \
@@ -1272,9 +1272,9 @@ restaure_backup() {
 msg_bem_vindo() {
     local msg
     msg="👋 Hello ${message_from_first_name[$id]} ! \n\n🤝 Welcome to\n"
-    msg+="<b>====================================</b>\n<b>               ❣️ SLEHIBOT VPS MANAGER ❣️   </b>\n<b>====================================</b>\n\n"
+    msg+="<b>================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️   </b>\n<b>================================</b>\n\n"
     msg+="<b>To access the menu</b>\n<b>click [ /menu ]</b>\n\n"
-    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @Kingamda_vps_manager"
+    msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @slehiteam"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
         --parse_mode html
@@ -1356,7 +1356,7 @@ criar_rev() {
     mkdir /etc/bot/revenda/"$u_rev"/usuarios
     touch /etc/bot/revenda/"$u_rev"/$u_rev
     echo -e "USER: $u_rev LIMITE: $l_rev DIAS: $d_rev TIPO: $t_rev" >>$ativos
-    echo -e "◈──────────────────◈\nLIMIT_RESALE: $l_rev\nDAYS_RESALE: $d_rev\n◈──────────────────◈\n" >/etc/bot/revenda/"$u_rev"/$u_rev
+    echo -e "❖──────────────────❖\nLIMIT_RESALE: $l_rev\nDAYS_RESALE: $d_rev\n❖──────────────────❖\n" >/etc/bot/revenda/"$u_rev"/$u_rev
     sed -i '$d' $file_rev
     echo -e "Due date: $(date "+%d/%m/%Y" -d "+$d_rev days")" >>$file_rev
 }
@@ -1595,7 +1595,7 @@ fun_list_rev() {
     }
     if [[ "${callback_query_from_id[$id]}" == "$id_admin" ]]; then
         local msg1
-        msg1="◈──────────────────◈\n📃 RESELLERS LIST !\n◈──────────────────◈\n"
+        msg1="❖──────────────────❖\n📃 RESELLERS LIST !\n❖──────────────────❖\n"
         [[ "$(grep -wc 'revenda' $ativos)" != '0' ]] && {
             while read _atvs; do
                 _uativ="$(echo $_atvs | awk '{print $2}')"
@@ -1614,7 +1614,7 @@ fun_list_rev() {
     elif [[ "$(grep -w ${callback_query_from_username} $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         _patch="/etc/bot/revenda"
         local msg1
-        msg1="◈──────────────────◈\n📃 LIST OF SUBSELLERS !\n◈──────────────────◈\n"
+        msg1="❖──────────────────❖\n📃 LIST OF SUBSELLERS !\n❖──────────────────❖\n"
         [[ "$(grep -wc "SUBREVENDA" $_patch/${callback_query_from_username}/${callback_query_from_username})" != '0' ]] && {
             while read _listsub; do
                 _usub="$(echo $_listsub | awk '{print $2}')"
@@ -2017,7 +2017,9 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM</b>\n\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
+\n\n<b>❖ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
+</b>" \
                             --parse_mode html
                         break
                     }
@@ -2030,14 +2032,16 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌\n\n⚠️ use only letters [EX: Yes or No]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧</b>  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM</b>\n\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
+\n\n<b>❖ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
+</b>" \
                             --parse_mode html
                         break
                     }
                     [[ "${message_text[$id]}" = @(Sim|sim|SIM) ]] && {
-                        msg_cli="◈──────────────────◈\n"
+                        msg_cli="❖──────────────────❖\n"
                         msg_cli+="<b>PRE-CONFIGURED FILES </b>❗\n"
-                        msg_cli+="◈──────────────────◈\n\n"
+                        msg_cli+="❖──────────────────❖\n\n"
                         for _file in $(ls /etc/bot/arquivos); do
                             i=$(($i + 1))
                             msg_cli+="<b>[$i]</b> - $_file\n"
@@ -2050,7 +2054,9 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM </b>\n\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
+</b>\n\n<b>❖ Host / IP       ៚  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
+</b>" \
                             --parse_mode html
                     }
                     ;;
@@ -2105,7 +2111,7 @@ while :; do
                     alterar_senha_user $(cat /tmp/name-s) ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "◈──────────────────◈\n<b>✅ PASSWORD CHANGED !</b> !\n◈──────────────────◈\n\n<b>User:</b> $(cat /tmp/name-s)\n<b>New Password:</b> ${message_text[$id]}")" \
+                        --text "$(echo -e "❖──────────────────❖\n<b>✅ PASSWORD CHANGED !</b> !\n❖──────────────────❖\n\n<b>User:</b> $(cat /tmp/name-s)\n<b>New Password:</b> ${message_text[$id]}")" \
                         --parse_mode html
                     rm /tmp/name-s >/dev/null 2>&1
                     ;;
@@ -2133,7 +2139,7 @@ while :; do
                     alterar_limite_user $(cat /tmp/name-l) ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "◈──────────────────◈\n<b>✅ Limit CHANGED !</b> !\n◈──────────────────◈\n\n<b>User:</b> $(cat /tmp/name-l)\n<b>New Limit:</b> ${message_text[$id]}")" \
+                        --text "$(echo -e "❖──────────────────❖\n<b>✅ Limit CHANGED !</b> !\n❖──────────────────❖\n\n<b>User:</b> $(cat /tmp/name-l)\n<b>New Limit:</b> ${message_text[$id]}")" \
                         --parse_mode html
                     rm /tmp/name-l >/dev/null 2>&1
                     ;;
@@ -2159,7 +2165,7 @@ while :; do
                     alterar_data_user $(cat /tmp/name-d) ${message_text[$id]}
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "◈──────────────────◈\n<b>✅ DATE CHANGED !</b> !\n◈──────────────────◈\n\n<b>User:</b> $(cat /tmp/name-d)\n<b>New Date:</b> $udata")" \
+                        --text "$(echo -e "❖──────────────────❖\n<b>✅ DATE CHANGED !</b> !\n❖──────────────────❖\n\n<b>User:</b> $(cat /tmp/name-d)\n<b>New Date:</b> $udata")" \
                         --parse_mode html
                     rm /tmp/name-d >/dev/null 2>&1
                     ;;
@@ -2176,9 +2182,9 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     elif [[ "${message_text[$id]}" = '2' ]]; then
                         [[ $(ls /etc/bot/arquivos | wc -l) != '0' ]] && {
-                            msg_cli1="◈──────────────────◈\n"
+                            msg_cli1="❖──────────────────❖\n"
                             msg_cli1+="🚀<b> HOSTED FILES </b>\n"
-                            msg_cli1+="◈──────────────────◈\n\n"
+                            msg_cli1+="❖──────────────────❖\n\n"
                             for _file in $(ls /etc/bot/arquivos); do
                                 i=$(($i + 1))
                                 msg_cli1+="<b>[$i]</b> - $_file\n"
@@ -2444,7 +2450,7 @@ while :; do
                     echo -e "Limite: ${message_text[$id]}" >>$CAD_ARQ
                     lim_rev $CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "◈──────────────────◈\n<b>✅ CHANGED RESALE LIMIT !</b> !\n◈──────────────────◈\n\n$(<$CAD_ARQ)")" \
+                        --text "$(echo -e "❖──────────────────❖\n<b>✅ CHANGED RESALE LIMIT !</b> !\n❖──────────────────❖\n\n$(<$CAD_ARQ)")" \
                         --parse_mode html
                     # ALTERAR DATA
                     ;;
@@ -2499,7 +2505,7 @@ while :; do
                     dat_rev $CAD_ARQ
                     [[ "$_erro" == '1' ]] && break
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text "$(echo -e "◈──────────────────◈\n<b>✅ CHANGED RESALE DATE!</b> !\n◈──────────────────◈\n\n$(<$CAD_ARQ)")" \
+                        --text "$(echo -e "❖──────────────────❖\n<b>✅ CHANGED RESALE DATE!</b> !\n❖──────────────────❖\n\n$(<$CAD_ARQ)")" \
                         --parse_mode html
                     ;;
                     # SUSPENDER REVENDEDOR
