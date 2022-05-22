@@ -15,10 +15,10 @@ ShellBot.username
 fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
-        env_msg="<b>❖────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -32,10 +32,10 @@ fun_menu() {
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>❖────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -43,10 +43,10 @@ fun_menu() {
         return 0
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
-        env_msg="<b>❖────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>❖────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
             --reply_markup "$keyboard1" \
@@ -69,9 +69,9 @@ fun_ajuda() {
     }
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
-        env_msg="<b>❖────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -95,9 +95,9 @@ fun_ajuda() {
         env_msg+="• <u>AUTOBACKUP</u> = On/Off Automatic Backup\n\n"
         env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n"
+        env_msg+="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -108,13 +108,13 @@ fun_ajuda() {
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e "🚫 YOU ARE SUSPENDED 🚫\n\nCONTACT THE ADMINISTRATOR")"
 	ShellBot.sendSticker --chat_id $id_chatuser \
-            --sticker "CAACAgEAAxkBAAEDbIdhrlBIJ-fUNJHXn-g352lK26WtBQACYgEAAgkeUEUw-f8AAZo7VDciBA"
+           --sticker "CAACAgEAAxkBAAEDbIdhrlBIJ-fUNJHXn-g352lK26WtBQACYgEAAgkeUEUw-f8AAZo7VDciBA"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
-        env_msg="<b>❖──────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="<b>[01] /menu</b> = Display menu\n"
         env_msg+="<b>[02] /info</b> = Display information\n"
@@ -132,9 +132,9 @@ fun_ajuda() {
         env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
         env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
         env_msg+="• <u>HELP</u> = Information about options\n\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n"
+        env_msg+="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -143,10 +143,10 @@ fun_ajuda() {
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
-        env_msg="<b>❖──────────────────────────────❖</b>\n"
+        env_msg="<b>❖──────────────────❖</b>\n"
         env_msg+="<b>                               ❣️ SLEHIBOT ❣️</b>\n"
         env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
+        env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
         env_msg+="[<b>02</b>] /info = Display information\n"
@@ -1369,7 +1369,7 @@ fun_del_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @Kingamda_vps_manager]:" \
+            --text "🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @slehiteam]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1487,7 +1487,7 @@ fun_lim_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @Kingamda_vps_manager]:" \
+            --text "♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @slehiteam]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -2303,7 +2303,7 @@ while :; do
                     [[ "$_erro" == '1' ]] && break
                     echo "Nome: ${message_text[$id]}" >$CAD_ARQ
                     ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                        --text 'Inform his username [Ex: @Kingamda_vps_manager]:' \
+                        --text 'Inform his username [Ex: @slehiteam]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
                 'Inform his username [Ex: @slehiteam]:')
