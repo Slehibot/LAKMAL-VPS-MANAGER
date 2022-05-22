@@ -79,10 +79,7 @@ fun_ajuda() {
         env_msg+="⚠️ <b>Available Options</b>\n\n"
         
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
-        env_msg+="• <u>SPEEDTEST</u> = Connection test\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n\n"
-        env_msg+="<b>❖──────────────────────────────❖</b>\n"
+         env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -107,18 +104,8 @@ fun_ajuda() {
         env_msg+="<b>[02] /info</b> = Display information\n"
         env_msg+="<b>[03] /help</b> = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User Information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
-        env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n"
+        
         env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
@@ -139,16 +126,8 @@ fun_ajuda() {
         env_msg+="[<b>02</b>] /info = Display information\n"
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
-        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
-        env_msg+="• <u>USER INFO</u> = User information\n\n"
-        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
-        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
-        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
-        env_msg+="• <u>CHANGE DATE</u> = Change ssh date\n\n"
-        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
-        env_msg+="• <u>HELP</u> = Information about options\n\n"
+        
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
