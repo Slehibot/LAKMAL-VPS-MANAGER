@@ -77,9 +77,25 @@ fun_ajuda() {
         env_msg+="[<b>02</b>] /info = Display information\n"
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
-        
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-         env_msg+="<b>❖──────────────────────────────❖</b>\n"
+        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
+        env_msg+="• <u>USER INFO</u> = User Information\n\n"
+        env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
+        env_msg+="• <u>VPS INFO</u> = Server Information\n\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
+        env_msg+="• <u>BACKUP</u> = Create ssh Backup and resellers\n\n"
+        env_msg+="• <u>OPTIMIZE</u> = Clear cache - ram\n\n"
+        env_msg+="• <u>SPEEDTEST</u> = Connection test\n\n"
+        env_msg+="• <u>FILES</u> = Host Files\n\n"
+        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
+        env_msg+="• <u>AUTOBACKUP</u> = On/Off Automatic Backup\n\n"
+        env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
+        env_msg+="• <u>HELP</u> = Information about options\n\n\n"
+        env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
@@ -104,8 +120,18 @@ fun_ajuda() {
         env_msg+="<b>[02] /info</b> = Display information\n"
         env_msg+="<b>[03] /help</b> = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        
+        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
+        env_msg+="• <u>USER INFO</u> = User Information\n\n"
+        env_msg+="• <u>ONLINE USERS</u> = Display Online Users\n\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change date ssh\n\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
+        env_msg+="• <u>RESALE</u> = Manage Resellers\n\n"
+        env_msg+="• <u>REPORT</u> = Information about resellers\n\n"
+        env_msg+="• <u>HELP</u> = Information about options\n\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n"
         env_msg+="<b>彡❤️🌟 LAKMAL SANDARU 🌟❤️彡</b>\n"
         env_msg+="<b>❖──────────────────────────────❖</b>\n\n"
@@ -126,8 +152,16 @@ fun_ajuda() {
         env_msg+="[<b>02</b>] /info = Display information\n"
         env_msg+="[<b>03</b>] /help = Information about options\n\n"
         env_msg+="⚠️ <b>Available Options</b>\n\n"
+        env_msg+="• <u>CREATE USER</u> = Create ssh user\n\n"
         env_msg+="• <u>CREATE TEST</u> = Create ssh test\n\n"
-        
+        env_msg+="• <u>REMOVE</u> = Remove ssh user\n\n"
+        env_msg+="• <u>USER INFO</u> = User information\n\n"
+        env_msg+="• <u>ONLINE USERS</u> = Display users online\n\n"
+        env_msg+="• <u>CHANGE PASSWORD</u> = Change ssh password\n\n"
+        env_msg+="• <u>CHANGE LIMIT</u> = Change ssh limit\n\n"
+        env_msg+="• <u>CHANGE DATE</u> = Change ssh date\n\n"
+        env_msg+="• <u>EXPIRED</u> = Remove expired ssh\n\n"
+        env_msg+="• <u>HELP</u> = Information about options\n\n"
         ShellBot.sendMessage --chat_id $id_chatuser \
             --text "$(echo -e $env_msg)" \
             --parse_mode html
@@ -160,7 +194,7 @@ fun_adduser() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text " \n\nEnter Username:" \
+            --text "🙎‍♂️ CREATE USER 🙎‍♂️\n\nEnter Username:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -786,7 +820,7 @@ otimizer() {
     }
     MEM1=$(free | awk '/Mem:/ {print int(100*$3/$2)}')
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "🧹 LEARING SERVER CACHE"
+        --text "🧹 CLEARING SERVER CACHE"
     apt-get autoclean -y
     echo 3 >/proc/sys/vm/drop_caches
     sync && sysctl -w vm.drop_caches=3 1>/dev/null 2>/dev/null
@@ -906,8 +940,8 @@ fun_add_teste() {
 }
 
 fun_teste() {
-    usuario=$(echo TESTE$((RANDOM % +500)))
-    senha='1234'
+    usuario=$(echo SLEHI$((RANDOM % +500)))
+    senha='SLEHIBOT'
     limite='1'
     t_time=$1
     ex_date=$(date '+%d/%m/%C%y' -d " +2 days")
@@ -1499,7 +1533,7 @@ fun_dat_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @Kingamda_vps_manager]:" \
+            --text "📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @slehiteam]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1611,7 +1645,7 @@ fun_susp_rev() {
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
         ShellBot.sendMessage --chat_id ${callback_query_message_chat_id[$id]} \
-            --text "🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @Kingamda_vps_manager]:" \
+            --text "🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @slehiteam]:" \
             --reply_markup "$(ShellBot.ForceReply)"
     } || {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -1726,7 +1760,7 @@ fun_menurevenda() {
 # LISTA MENU ADMIN
 unset menu1
 menu1=''
-ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text '❌' --callback_data '_criaruser'
+ShellBot.InlineKeyboardButton --button 'menu1' --line 1 --text 'CREATE USER' --callback_data '_criaruser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 2 --text 'CREATE TEST' --callback_data '_criarteste'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 3 --text 'REMOVE USER' --callback_data '_deluser'
 ShellBot.InlineKeyboardButton --button 'menu1' --line 4 --text 'CHANGE PASSWORD' --callback_data '_altsenha'
@@ -2272,13 +2306,13 @@ while :; do
                         --text 'Inform his username [Ex: @Kingamda_vps_manager]:' \
                         --reply_markup "$(ShellBot.ForceReply)"
                     ;;
-                'Inform his username [Ex: @Kingamda_vps_manager]:')
+                'Inform his username [Ex: @slehiteam]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-                            --text "$(echo -e "❌ Error \n\n⚠️ inform the username [EX: @Kingamda_vps_manager]")" \
+                            --text "$(echo -e "❌ Error \n\n⚠️ inform the username [EX: @slehiteam]")" \
                             --parse_mode html
                         break
                     }
@@ -2330,7 +2364,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # REMOVE REVENDEDOR
-                '🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @Kingamda_vps_manager]:')
+                '🗑 REMOVE DEALER 🗑\n\nInform his username [Ex: @slehiteam]:')
                     echo -e "${message_text[$id]}" >$CAD_ARQ
                     _Var=$(sed -n '1 p' $CAD_ARQ | awk -F '@' {'print $2'})
                     [[ -z $_Var ]] && {
@@ -2343,7 +2377,7 @@ while :; do
                     break
                     ;;
                     # ALTERAR LIMITE
-                '♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @Kingamda_vps_manager]:')
+                '♾ CHANGE RESALE LIMIT ♾\n\nInform his username [Ex: @slehiteam]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     echo -e "Dealer: ${message_text[$id]}" >$CAD_ARQ
@@ -2420,7 +2454,7 @@ while :; do
                         --parse_mode html
                     # ALTERAR DATA
                     ;;
-                '📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @Kingamda_vps_manager]:')
+                '📆 CHANGE RESALE DATE 📆\n\nInform his username [Ex: @slehiteam]:')
                     verifica_acesso
                     [[ "$_erro" == '1' ]] && break
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
@@ -2475,7 +2509,7 @@ while :; do
                         --parse_mode html
                     ;;
                     # SUSPENDER REVENDEDOR
-                '🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @Kingamda_vps_manager]:')
+                '🔒 SUSPEND DEALER 🔒\n\nInform his username [Ex: @slehiteam]:')
                     _VAR1=$(echo -e ${message_text[$id]} | awk -F '@' {'print $2'})
                     [[ -z $_VAR1 ]] && {
                         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
