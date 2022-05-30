@@ -33,7 +33,7 @@ criarteste() {
     senha=$((RANDOM% + 99999))
     limite='1'
     tempo='1'
-    tuserdate=$(date '+%C%y/%m/%d' -d " +1 days")
+    tuserdate=$(date '+%C%y/%m/%d' -d " +5 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
     echo "$senha" > /etc/VPSManager/senha/$usuario
