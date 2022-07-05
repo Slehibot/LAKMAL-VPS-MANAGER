@@ -94,9 +94,9 @@ clear
 
     echo ""
     echo -e "\033[1;32m⍟ SSH Port        \033[1;32m⍨  22       "
-    echo -e "\033[1;32m⍟ SSL Port        \033[1;32m⍨  443      "
+    echo -e "\033[1;32m⍟ SSL Port        \033[1;32m⍨  445      "
     echo -e "\033[1;32m⍟ Squid Proxy     \033[1;32m⍨  8080     "
-    echo -e "\033[1;32m⍟ DropBear Port   \033[1;32m⍨  80       "
+    echo -e "\033[1;32m⍟ DropBear Port   \033[1;32m⍨  550       "
     echo -e "\033[1;32m⍟ BadVPN          \033[1;32m⍨  7300     "
 
     echo ""
