@@ -18,8 +18,4 @@ apt-get update -y; apt-get upgrade -y; apt install vnstat -y; wget https://raw.g
 ```
 
 ## ㅤ
-missing add host file
-```
-sudo nano /etc/squid/payload.txt
-```
 
