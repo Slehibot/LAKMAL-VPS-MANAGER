@@ -360,8 +360,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m✰ BadVPN        \033[1;32m⍨  7300     "
     echo ""
     echo -e "\033[1;37m=============================="
-    echo -e 
-"\033[1;32m=       LAKMAL SANDARU       ="
+    echo -e "\033[1;32m=       LAKMAL SANDARU       ="
     echo -e "\033[1;37m=============================="
 		sleep 1
 		function aguarde() {
@@ -419,8 +418,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m✰ BadVPN        \033[1;32m⍨  7300     "
     echo ""
     echo -e "\033[1;37m=============================="
-    echo -e 
-"\033[1;32m=       LAKMAL SANDARU       ="
+    echo -e "\033[1;32m=       LAKMAL SANDARU       ="
     echo -e "\033[1;37m==============================" 
 	}
 } || {
@@ -447,7 +445,6 @@ echo "$username $sshlimiter" >>/root/usuarios.db
     echo -e "\033[1;32m✰ BadVPN        \033[1;32m⍨  7300     "
     echo ""
     echo -e "\033[1;37m=============================="
-    echo -e 
-"\033[1;32m=       LAKMAL SANDARU       ="
+    echo -e "\033[1;32m=       LAKMAL SANDARU       ="
     echo -e "\033[1;37m==============================" 
 }
