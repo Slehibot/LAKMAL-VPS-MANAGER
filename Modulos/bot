@@ -16,8 +16,8 @@ fun_menu() {
     [[ "${message_from_id[$id]}" == "$id_admin" ]] && {
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
-        env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>❣️ SMART LIFE ❣️</b>\n"
+        env_msg+="<b>★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -33,8 +33,8 @@ fun_menu() {
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
-        env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>❣️ SMART LIFE ❣️</b>\n"
+        env_msg+="<b>★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -44,8 +44,8 @@ fun_menu() {
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>                            ❣️ SLEHIBOT ❣️</b>\n"
-        env_msg+="<b>                ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>❣️ SMART LIFE ❣️</b>\n"
+        env_msg+="<b>★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="<b>⚠️ <i>SELECT AN OPTION BELOW!</i></b>\n\n"
 	ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -70,7 +70,7 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
+        env_msg+="<b>彡❣️ SMART LIFE VPS MANAGER BOT ❣️彡</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = Display menu\n"
@@ -113,7 +113,7 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>彡❣️ SLEHIBOT  VPS MANAGER BOT ❣️彡</b>\n"
+        env_msg+="<b>彡❣️ SMART LIFE VPS MANAGER BOT ❣️彡</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="<b>[01] /menu</b> = Display menu\n"
@@ -144,8 +144,8 @@ fun_ajuda() {
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'subrevenda' ]]; then
         local env_msg
         env_msg="<b>❖──────────────────❖</b>\n"
-        env_msg+="<b>                               ❣️ SLEHIBOT ❣️</b>\n"
-        env_msg+="<b>                   ★彡 VPS MANAGER BOT 彡★</b>\n"
+        env_msg+="<b>❣️ SMART LIFE ❣️</b>\n"
+        env_msg+="<b>★彡 VPS MANAGER BOT 彡★</b>\n"
         env_msg+="<b>❖──────────────────❖</b>\n\n"
         env_msg+="⚠️ <b>Available Commands</b>\n\n"
         env_msg+="[<b>01</b>] /menu = display menu\n"
@@ -755,7 +755,7 @@ infovps() {
     [[ "$(netstat -nplt | grep 'python' | wc -l)" != '0' ]] && echo -e "Proxy Socks: $(netstat -nplt | grep 'python' | awk {'print $4'} | cut -d: -f2 | xargs)" >>$PTs
     local info
     info="❖──────────────────❖\n"
-    info+="<b>        SERVER INFORMATION</b>\n"
+    info+="<b>SERVER INFORMATION</b>\n"
     info+="❖──────────────────❖\n\n"
     info+="<b>OPERATING SYSTEM</b>\n"
     info+="$system\n\n"
@@ -804,7 +804,23 @@ fun_download() {
     echo $_file2
     ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
         --document "@/etc/bot/arquivos/$_file" \
-        --caption "$(echo -e "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>\n\n<b>✰ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n<b>✰ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n<b>✰ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $_file2)\n<b>✰ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" 
+        --caption "$(echo -e "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          :\n
+            ✰ HOST        :\n
+            ✰ Username    :<code>$(awk -F " " '/Nome/ {print $2}' $_file2)</code>\n
+            ✰ Password    :<code>$(awk -F " " '/Senha/ {print $2}' $_file2)</code>\n
+            ✰ Login Limit :   $(awk -F " " '/Limite/ {print $2}' $_file2)\n
+            ✰ Expire Date :  $(awk -F " " '/Validade/ {print $2}' $_file2)\n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n")" 
         --parse_mode html
     [[ -e "/root/$(awk -F " " '/Nome/ {print $2}' $_file2).ovpn" ]] && {
         ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
@@ -898,7 +914,7 @@ backup_users() {
 sobremim() {
     local msg
     msg="❖──────────────────❖\n"
-    msg+="<b>❣️ SLEHIBOT VPS MANAGER ❣️</b>\n"
+    msg+="<b>❣️SMART LIFE VPS MANAGER ❣️</b>\n"
     msg+="❖──────────────────❖\n\n"
     msg+="<b>Developed by:</b> @slehiteam\n"
     msg+="<b>Official Group:</b> @slehibot\n\n"
@@ -940,12 +956,12 @@ fun_add_teste() {
 }
 
 fun_teste() {
-    usuario=$(echo SLEHI$((RANDOM % +500)))
-    senha='slehibot'
+    usuario=$(echo SLVPN$((RANDOM % +500)))
+    senha='SLVPN'
     limite='999'
     t_time=$1
-    ex_date=$(date '+%d/%m/%C%y' -d " +2 days")
-    tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
+    ex_date=$(date '+%d/%m/%C%y' -d " +5 days")
+    tuserdate=$(date '+%C%y/%m/%d' -d " +5 days")
     [[ -z $t_time ]] && {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
             --text "$(echo -e "❌ error try again")" \
@@ -981,13 +997,43 @@ fun_teste() {
         for arqv in $(ls /etc/bot/arquivos); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/etc/bot/arquivos/$arqv" \
-                --caption "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻TEST SSH ACCOUNT༺─────❖</b>\n\n<b>✰ Username    ៚</b>  <code>$usuario</code>\n<b>✰ Password     ៚</b> <code>slehibot</code>\n<b>✰ Expire at  ៚</b> $t_time $hrs / Hours \n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" \
+                --caption "$(echo -e "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          :\n
+            ✰ HOST        :\n
+            ✰ Username    : <code>$usuario</code>\n
+            ✰ Password    : <code>SLVPN</code>\n
+            ✰ Expire at   : $t_time $hrs / Hours \n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n")" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻TEST SSH ACCOUNT༺─────❖</b>\n\n<b>✰ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>✰ Username    ៚</b>  <code>$usuario</code>\n<b>✰ Password     ៚</b> <code>slehibot</code>\n<b>✰ Expire at       ៚</b> $t_time $hrs / Hours \n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>")" \
+            --text "$(echo -e "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          : <code>$(cat /etc/IP)</code>\n
+            ✰ HOST        : \n
+            ✰ Username    : <code>$usuario</code>\n
+            ✰ Password    : <code>SLVPN</code>\n
+            ✰ Expire at   : $t_time $hrs / Hours \n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n")" \
             --parse_mode html
         return 0
     }
@@ -1272,7 +1318,7 @@ restaure_backup() {
 msg_bem_vindo() {
     local msg
     msg="👋 Hello ${message_from_first_name[$id]} ! \n\n🤝 Welcome to\n"
-    msg+="<b>================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️   </b>\n<b>================================</b>\n\n"
+    msg+="<b>================================</b>\n<b>❣️ SMARTLIFE VPS MANAGER ❣️   </b>\n<b>================================</b>\n\n"
     msg+="<b>To access the menu</b>\n<b>click [ /menu ]</b>\n\n"
     msg+="<b>For information</b>\n<b>click [ /help ]</b>\n\n ✅ All Tutorials , Updates : @slehiteam"
     ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
@@ -2017,9 +2063,23 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
-\n\n<b>❖ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
-</b>" \
+                            --text "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          : <code>$(cat /etc/IP)</code>\n
+            ✰ HOST        : \n
+            ✰ Username    : <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Password    : <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Login Limit : $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n
+            ✰ Expire Date : $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n" \
                             --parse_mode html
                         break
                     }
@@ -2032,9 +2092,23 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌\n\n⚠️ use only letters [EX: Yes or No]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
-\n\n<b>❖ Host / IP       ៚</b>  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
-</b>" \
+                            --text "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          : <code>$(cat /etc/IP)</code>\n
+            ✰ HOST        : \n
+            ✰ Username    : <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Password    : <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Login Limit : $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n
+            ✰ Expire Date : $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n" \
                             --parse_mode html
                         break
                     }
@@ -2054,9 +2128,23 @@ while :; do
                             --reply_markup "$(ShellBot.ForceReply)"
                     } || {
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>================================</b>\n<b>   ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>================================</b>\n\n<b>❖─────༻ IMPORTANT ༺─────❖</b>\n\n✧⇝ 🚫 NO SPAM\n✧⇝ ⚠️ NO DDOS\n✧⇝ 🎭 NO Hacking\n✧⇝ ⛔️ NO Carding\n✧⇝ 🙅‍♂️ NO Torrent\n✧⇝ ❌ NO MultiLogin\n✧⇝ 🤷‍♂️ NO Illegal Activities\n\n<b>❖─────༻ SSH ACCOUNT ༺─────❖</b>
-</b>\n\n<b>❖ Host / IP       ៚  <code>$(cat /etc/IP)</code>\n<b>❖ Username    ៚</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Password     ៚</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>❖ Login Limit   ៚</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>❖ Expire Date  ៚</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>❖─────༻ PORTS ༺─────❖</b>\n\n⍟ SSH            ⍨   22\n⍟ SSL             ⍨  443\n⍟ Squid         ⍨  8080\n⍟ DropBear ⍨  80\n⍟ BadVPN    ⍨  7300\n\n<b>❖─────༻ SCRIPT MAKE BY ༺─────❖</b>\n<b> ☬── ꧁ SLEHIBOT TEAM ꧂ ──☬ </b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖</b>\n<b> ☬❦─ ⍣ LAKMAL 〄 SANDARU ⍣ ─❦☬</b>\n<b>❖───── ⍨ ──── ⍤ ──── ⍨ ─────❖
-</b>" \
+                            --text "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          : <code>$(cat /etc/IP)</code>\n
+            ✰ HOST        : \n
+            ✰ Username    : <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Password    : <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Login Limit : $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n
+            ✰ Expire Date : $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n" \
                             --parse_mode html
                     }
                     ;;
@@ -2068,7 +2156,23 @@ while :; do
                             --text "$(echo -e "❌ Invalid option ❌ \n\n⚠️ use only numbers [EX: 1]")" \
                             --parse_mode html
                         ShellBot.sendMessage --chat_id ${message_from_id[$id]} \
-                            --text "<b>====================================</b>\n<b>      ❣️ SLEHIBOT VPS MANAGER ❣️</b>\n<b>====================================</b>\n\n<b>◈─────⪧ IMPORTANT ⪦──────◈</b>\n\n◈⪧ 🚫 NO SPAM\n◈⪧ ⚠️ NO DDOS\n◈⪧ 🎭 NO Hacking\n◈⪧ ⛔️ NO Carding\n◈⪧ 🙅‍♂️ NO Torrent\n◈⪧ ❌ NO MultiLogin\n◈⪧ 🤷‍♂️ NO Illegal Activities\n\n<b>◈─────⪧ SSH ACCOUNT ⪦─────◈</b>\n\n<b>◈ Host / IP       :⪧  <code>$(cat /etc/IP)</code>\n<b>◈ Username    :⪧</b>  <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Password     :⪧</b>  <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n<b>◈ Login Limit   :⪧</b> $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n<b>◈ Expire Date  :⪧</b> $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n<b>◈──────⪧ PORTS ⪦ ───────◈</b>\n\n◈ SSH            ⌁   22\n◈ SSL             ⌁  443\n◈ Squid         ⌁  8080\n◈ DropBear ⌁  80\n◈ BadVPN    ⌁  7300\n\n<b>◈───⪧SCRIPT MAKE BY⪦────◈ </b>\n\n<b>SLEHIBOT TEAM </b>\n\n<b>◈──────────────────◈</b>\n<b>❤️🌟 LAKMAL SANDARU 🌟❤️</b>\n<b>◈──────────────────◈</b>" \
+                            --text "<b>==============================</b>\n
+            <b> ❣️ㅤSMART LIFE VPS MANAGERㅤ❣️    </b>\n
+            <b>==============================</b>\n\n
+            ✰ IP          : <code>$(cat /etc/IP)</code>\n
+            ✰ HOST        : \n
+            ✰ Username    : <code>$(awk -F " " '/Nome/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Password    : <code>$(awk -F " " '/Senha/ {print $2}' $CAD_ARQ)</code>\n
+            ✰ Login Limit : $(awk -F " " '/Limite/ {print $2}' $CAD_ARQ)\n
+            ✰ Expire Date : $(awk -F " " '/Validade/ {print $2}' $CAD_ARQ)\n\n
+            ✰ OpenSSH     : 22 \n
+            ✰ SSL/TLS     : 443 \n
+            ✰ Port Squid  : 8080 \n
+            ✰ DropBear    : 550, 80 \n
+            ✰ BadVPN      : 7300 \n
+            ==============================\n
+            =       LAKMAL SANDARU       =\n
+            ==============================\n" \
                             --parse_mode html
                         >$CAD_ARQ
                         break
